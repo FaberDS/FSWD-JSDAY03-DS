@@ -5,85 +5,55 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title></title>
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet"> 
 </head>
 
 <body>
-    <h1 id="header1"></h1>
-    <span id="temperatures"></span>
-    <span id="temperature"></span>
-    <h1 id="header2"></h1>
-    <span id=""></span>
-    <span id=""></span>
-        <label> Give me some numbers I will tell you the highest
+    <div class="wrapper">
+        <h1>Basic Exercise 1 JS Day 3 | Temperature</h1>
+        <div class="content">
+            <button type="submit" id="tempBtn">Ask for the Temperature</button>
+            <span id="temperature"></span>
+            <hr>
+        </div>
+        <h1>Basic Exercise 2 JS Day 3 | Highest value</h1>
+        <div class="content">
+            <label> Give me some numbers I will tell you the highest
+                <br>
+                <input id="input-value" type="text" name="input-value">
+            </label>
+            <button type="submit" onclick="addTo()" value="See the highest">See the highest</button>
             <br>
-            <input id="input-value" type="text"  name="input-value">
-        </label>
-        <button type="submit" onclick="addTo()" value="See the highest">See the highest</button>
-    <script>
-    // Basic Exercise 1 JS Day 3 | Temperature
-    function temper() {
-        document.getElementById("header1").innerHTML = "Basic Exercise 1 JS Day 3 | Temperature";
-        var temp = Math.round((Math.random() * 30) - 5);
-
-        document.getElementById("temperatures").innerHTML = temp;
-        if (temp >= 25) {
-            document.getElementById("temperature").innerHTML = " it is hot! <br>";
-        } else if (temp < 25 && temp > 10) {
-            document.getElementById("temperature").innerHTML = " it is moderate! <br>";
-        } else {
-            document.getElementById("temperature").innerHTML = " it is cold! <br>";
-
-        }
-    }
-    temper();
-    // -------for Loop example
-    // for (i = 0; i < 100; i++) {
-    //     temp = Math.round((Math.random() * 30) - 5);
-    //     // temp = 
-    //     document.write(temp);
-    //     if (temp >= 25) {
-    //         document.write(" it is hot! <br>");
-    //     } else if (temp < 25 && temp > 10) {
-    //         document.write(" it is moderate! <br>");
-    //     } else {
-    //         document.write(" it is cold! <br>");
-
-    //     }
-    // }
-    // -------------Basic Exercise 2 JS Day 3 | Highest value in an array
-
-    //  document.getElementById("header2").innerHTML = "Basic Exercise 2 | JS Day 3 | Highest value in an array";
-    //  function highest(){
-    //  	insert-value = new Array();
-    // 	insert-value= getElementById("input-value").
-    // }
-    var myarr = [];
-
-    function addTo() {
-        myarr.push(document.getElementById("input-value").value);
-        console.log(myarr); //to confirm it has been added to the array
-        var rangeMax = Math.max(...myarr);
-        console.log(rangeMax);
-        // form.reset();
-        document.getElementById('input-value').value = '';
-    }
-
-    // NUMBER_OF_INPUTS = 3; // var i = 0; // Loop iterator // var userInput; // Input from user // sum = 0; //initialise sum // // Collect inputs // for (i = 0; i < NUMBER_OF_INPUTS; i++) { // userInput=p arseInt(prompt( 'Enter input ' + (i + 1) + ' of ' + NUMBER_OF_INPUTS)); // sum +=u serInput; // sum /=N UMBER_OF_INPUTS; // } // document.write(userInput);
-
-
-
-
-    //  Random Array
-    // var range = Array.from({ length: 40 }, () => Math.floor(Math.random() * 40));
-    // if (!range.isNaN) {
-    //     document.write(range + "<br>");
-    //     var rangeMax = Math.max(...range);
-    // document.write(rangeMax);
-    // } else {
-    //     document.write(lose);
-    // }
-    </script>
+            <span id="maxResult"></span>
+            <hr>
+        </div>
+        <h1>Basic Exercise 3 JS Day 3 | Product</h1>
+        <div class="content">
+            <span id=""></span>
+            <label> Give me some numbers I will multiply them
+                <br>
+                <input id="inputProduct" type="text" name="inputProduct">
+            </label>
+            <button type="submit" id="productBtn">multiply</button>
+            <br>
+            <span>The product is:  </span>
+            <span id="productResult"></span>
+            <hr>
+        </div>
+        <h1>Basic Exercise 4 JS Day 3 | First Letter UpperCase</h1>
+        <div class="content">
+            <label> Give me some words and I will set the first letter to uppercase
+                <br>
+                <input id="inputUpperCase" type="text">
+            </label>
+            <button id="uBtn" value="Lift">Lift up!</button>
+            <br>
+            <span>So it looks like this: </span>
+            <span id="upperCaseResult"></span>
+        </div>
+        <script src="js/main.js"></script>
+    </div>
 </body>
 
 </html>

@@ -1,0 +1,33 @@
+* {
+  font-family: "Lato", sans-serif; }
+
+body {
+  background-color: #9771A8; }
+
+.wrapper {
+  margin: 20px 10%; }
+
+.content {
+  padding-left: 20px;
+  padding-right: 20px; }
+
+button, input {
+  font-size: 1.2em;
+  line-height: 1.5em;
+  padding: 5px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #433c3e; }
+
+button {
+  border-radius: 0; }
+
+button:hover, input:hover {
+  background-color: #2c2426;
+  color: white;
+  box-shadow: 3px 3px 3px #433c3e; }
+
+span {
+  font-size: 1.5em; }
+
+/*# sourceMappingURL=style.css.map */
