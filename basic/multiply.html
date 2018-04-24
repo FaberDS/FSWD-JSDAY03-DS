@@ -9,30 +9,51 @@
 </head>
 
 <body>
-
+    
     <span id=""></span>
-        <label> Give me some numbers I will tell you the highest
+        <label> Give me some numbers I will multiply them
             <br>
             <input id="input-value" type="text"  name="input-value">
         </label>
-        <button type="submit" onclick="addTo()" value="See the highest">See the highest</button>
-        <span>You highest number was: </span>
+        <button type="submit" onclick="multiply()" value="Multiply">multiply</button>
+        <span>The product is:  </span>
         <span id="result"></span>
     <script>
+
+
+
+
     //create an array
     var myarr = [];
+    var product = 1;
     //create a function
-    function addTo() {
+    function multiply() {
         //get the value of the Element with the id "input-value" and push it into the array
         myarr.push(document.getElementById("input-value").value);
-        console.log(myarr); //to confirm it has been added to the array
-        //choose the Max Value from the array
-        var rangeMax = Math.max(...myarr);
-        //print the rangeMax
-        document.getElementById("result").innerHTML = rangeMax;
-        // Set the Input field to the an empty value
+        console.log(myarr);
+        product = (product * myarr[myarr.length-1]);
+        // for (i = 0; i<myarr.length; i++){
+            
+        // }
+        
+        document.getElementById("result").innerHTML = product;
         document.getElementById('input-value').value = '';
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     </script>
 </body>
 

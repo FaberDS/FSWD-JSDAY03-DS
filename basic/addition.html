@@ -4,35 +4,52 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title></title>
+    <title>Addition</title>
     <link rel="stylesheet" href="">
 </head>
 
 <body>
-
+    
     <span id=""></span>
-        <label> Give me some numbers I will tell you the highest
+        <label> Give me some numbers I will summaries them
             <br>
             <input id="input-value" type="text"  name="input-value">
         </label>
-        <button type="submit" onclick="addTo()" value="See the highest">See the highest</button>
-        <span>You highest number was: </span>
+        <button type="submit" onclick="add()" value="Multiply">add</button>
+        <span>The product is:  </span>
         <span id="result"></span>
     <script>
+
+
+
+
     //create an array
     var myarr = [];
+    var sum = 0;
     //create a function
-    function addTo() {
+    function add() {
         //get the value of the Element with the id "input-value" and push it into the array
         myarr.push(document.getElementById("input-value").value);
-        console.log(myarr); //to confirm it has been added to the array
-        //choose the Max Value from the array
-        var rangeMax = Math.max(...myarr);
-        //print the rangeMax
-        document.getElementById("result").innerHTML = rangeMax;
-        // Set the Input field to the an empty value
+        console.log(myarr);
+        sum = (sum + myarr[myarr.length-1]);
+        document.getElementById("result").innerHTML = sum;
         document.getElementById('input-value').value = '';
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     </script>
 </body>
 
