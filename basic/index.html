@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <script>
+    	var temp = 0;
+    for (i = 0; i < 100; i++) {
+        temp = Math.round((Math.random() * 30) - 5);
+        // temp = 
+        document.write(temp);
+        if (temp >= 25) {
+            document.write(" it is hot! <br>");
+        } else if (temp < 25 && temp > 10) {
+            document.write(" it is moderate! <br>");
+        } else {
+            document.write(" it is cold! <br>");
+
+        }
+    }
+
+    </script>
+</body>
+
+</html>
